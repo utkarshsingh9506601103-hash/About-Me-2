@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Me - Glass UI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#050816;
+    overflow:hidden;
+}
+
+/* Animated background */
+body::before,
+body::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    filter:blur(90px);
+    animation: float 8s ease-in-out infinite;
+}
+
+body::before{
+    background:#00f7ff;
+    top:-100px;
+    left:-100px;
+}
+
+body::after{
+    background:#ff00ff;
+    bottom:-100px;
+    right:-100px;
+    animation-delay:4s;
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(40px);
+    }
+}
+
+/* Glass Card */
+.card{
+    width:400px;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(25px);
+    border:1px solid rgba(255,255,255,0.25);
+    box-shadow:
+    0 0 25px rgba(0,247,255,0.5),
+    0 0 60px rgba(255,0,255,0.2);
+    color:white;
+    text-align:center;
+    z-index:10;
+}
+
+/* Heading */
+h1{
+    font-size:38px;
+    margin-bottom:10px;
+    letter-spacing:2px;
+    text-shadow:0 0 20px #00f7ff;
+}
+
+p{
+    color:#c9d2ff;
+    margin-bottom:25px;
+}
+
+/* Input Boxes */
+.input-box{
+    position:relative;
+    margin:18px 0;
+}
+
+input, textarea{
+    width:100%;
+    padding:15px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.2);
+    color:white;
+    font-size:15px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#00f7ff;
+    box-shadow:0 0 20px #00f7ff;
+}
+
+textarea{
+    height:110px;
+    resize:none;
+}
+
+::placeholder{
+    color:#aaa;
+}
+
+/* Button */
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:40px;
+    background:linear-gradient(90deg,#00f7ff,#ff00ff);
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 30px #00f7ff;
+}
+
+/* Mobile */
+@media(max-width:450px){
+    .card{
+        width:90%;
+        padding:30px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>CONTACT</h1>
+    <p>Let's create something amazing together.</p>
+
+    <form>
+        <div class="input-box">
+            <input type="text" placeholder="Your Name">
+        </div>
+
+        <div class="input-box">
+            <input type="email" placeholder="Your Email">
+        </div>
+
+        <div class="input-box">
+            <textarea placeholder="Your Message"></textarea>
+        </div>
+       <button type="button" onclick="window.location.href='contact me result.html'">
+    Send Message ✨
+</button>                
+        
+</div>
+
+</body>
+</html>
