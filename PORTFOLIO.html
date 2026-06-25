@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2, #ff758c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.container{
+    width: 90%;
+    max-width: 1000px;
+}
+
+.profile{
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.profile h1{
+    font-size: 45px;
+}
+
+.profile p{
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 25px;
+    color: white;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    transition: 0.4s;
+}
+
+.card:hover{
+    transform: translateY(-10px) scale(1.03);
+    background: rgba(255,255,255,0.25);
+}
+
+.card h2{
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.card p, .card li{
+    line-height: 1.7;
+}
+
+ul{
+    padding-left: 20px;
+}
+
+.footer{
+    text-align: center;
+    color: white;
+    margin-top: 25px;
+    font-size: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="profile">
+    <h1>Utkarsh Singh</h1>
+    <p>Student | Future Developer | Creative Learner</p>
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <h2>🎓 My Class</h2>
+        <p>Class VIII</p>
+    </div>
+
+    <div class="card">
+        <h2>🏫 My School</h2>
+        <p>St Joseph Montessori School</p>
+    </div>
+
+    <div class="card">
+        <h2>📚 Favourite Subjects</h2>
+        <ul>
+            <li>Computer Science</li>
+            <li>Mathematics</li>
+            <li>Science</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>💻 My Skills</h2>
+        <ul>
+            <li>Logical Raesoning</li>
+            <li>Problem Solving</li>
+            <li>Deep Thinking</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🎯 My Goals</h2>
+        <p>
+            I want to become a successful software engineer and 
+            create innovative websites and applications.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>🎨 Hobbies</h2>
+        <ul>
+            <li>Coding</li>
+            <li>Reading Books</li>
+            <li>Exploring Technology</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🏆 Achievements</h2>
+        <p>
+            Participated in school activities and continuously 
+            improving my technical skills.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>📞 Contact Me</h2>
+        <p>
+            Email: utkarshsingh9506601103@gmail.com<br>
+            Phone: +91 95066 01103
+        </p>
+    </div>
+
+</div>
+
+<div class="footer">
+    © 2026 Utkarsh Singh | My Personal Portfolio
+</div>
+
+</div>
+
+</body>
+</html>

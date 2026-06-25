@@ -1,0 +1,179 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1d2671, #c33764);
+            overflow: hidden;
+        }
+
+        /* Glass Card */
+        .container{
+            width: 80%;
+            max-width: 900px;
+            padding: 40px;
+            border-radius: 25px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+            color: white;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+
+        .intro{
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 35px;
+            color: #f1f1f1;
+        }
+
+        .skill{
+            margin: 20px 0;
+        }
+
+        .skill-name{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .bar{
+            width: 100%;
+            height: 12px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress{
+            height: 100%;
+            border-radius: 20px;
+            background: linear-gradient(90deg, #00ffcc, #00a2ff);
+            animation: load 2s ease-in-out;
+        }
+
+        .html{
+            width: 90%;
+        }
+
+        .css{
+            width: 85%;
+        }
+
+        .js{
+            width: 70%;
+        }
+
+        .design{
+            width: 80%;
+        }
+
+        @keyframes load{
+            from{
+                width: 0;
+            }
+        }
+
+        .btn{
+            display: block;
+            margin: 35px auto 0;
+            padding: 12px 30px;
+            border-radius: 30px;
+            border: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: 0.4s;
+        }
+
+        .btn:hover{
+            background: white;
+            color: #1d2671;
+            transform: scale(1.1);
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h1>My Skills</h1>
+
+    <p class="intro">
+        I am a passionate web developer who loves creating modern, attractive and user-friendly websites.
+    </p>
+
+    <div class="skill">
+        <div class="skill-name">
+            <span>MATHS</span>
+            <span>90%</span>
+        </div>
+        <div class="bar">
+            <div class="progress html"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-name">
+            <span>COMPUTER SCIENCE</span>
+            <span>85%</span>
+        </div>
+        <div class="bar">
+            <div class="progress css"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-name">
+            <span>ENGLISH</span>
+            <span>70%</span>
+        </div>
+        <div class="bar">
+            <div class="progress js"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <div class="skill-name">
+            <span>GENERAL KNOWLADGE</span>
+            <span>80%</span>
+        </div>
+        <div class="bar">
+            <div class="progress design"></div>
+        </div>
+    </div>
+
+    <button class="btn" onclick="history.back()">
+        ⬅ Back to Home
+    </button>
+
+</div>
+
+</body>
+</html>

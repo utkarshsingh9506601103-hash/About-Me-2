@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Message Delivered</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#050816,#0f1735);
+    overflow:hidden;
+}
+
+/* Glowing Background */
+body::before,
+body::after{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    border-radius:50%;
+    filter:blur(100px);
+    animation:move 8s infinite ease-in-out;
+}
+
+body::before{
+    background:#00fff2;
+    top:-150px;
+    left:-100px;
+}
+
+body::after{
+    background:#ff00e6;
+    bottom:-150px;
+    right:-100px;
+    animation-delay:4s;
+}
+
+@keyframes move{
+    50%{
+        transform:translateY(60px);
+    }
+}
+
+/* Glass Card */
+.card{
+    width:430px;
+    padding:50px 40px;
+    text-align:center;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(30px);
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:30px;
+    color:white;
+    box-shadow:
+        0 0 40px rgba(0,255,255,0.5),
+        0 0 80px rgba(255,0,255,0.3);
+    animation:appear 1s ease;
+    z-index:5;
+}
+
+/* Animation */
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(0.9);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* Success Icon */
+.icon{
+    width:100px;
+    height:100px;
+    margin:auto;
+    border-radius:50%;
+    background:rgba(0,255,200,0.15);
+    border:2px solid #00ffd5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:50px;
+    color:#00ffd5;
+    box-shadow:0 0 35px #00ffd5;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        box-shadow:0 0 60px #00ffd5;
+        transform:scale(1.1);
+    }
+}
+
+/* Text */
+h1{
+    margin-top:25px;
+    font-size:38px;
+    letter-spacing:1px;
+    text-shadow:0 0 20px #00fff2;
+}
+
+p{
+    margin-top:18px;
+    font-size:17px;
+    line-height:1.8;
+    color:#d9e2ff;
+}
+
+/* Thank You Text */
+.thanks{
+    margin-top:25px;
+    font-size:19px;
+    color:#00ffd5;
+    text-shadow:0 0 15px #00ffd5;
+    animation:shine 2s infinite alternate;
+}
+
+@keyframes shine{
+    from{
+        opacity:0.6;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* Mobile */
+@media(max-width:500px){
+    .card{
+        width:90%;
+        padding:40px 25px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    p{
+        font-size:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="icon">✔</div>
+
+    <h1>Message Sent!</h1>
+
+    <p>
+        Your message has been successfully delivered.<br>
+        Thank you for reaching out to me.
+        I will respond as soon as possible.
+    </p>
+
+    <div class="thanks">
+        ✨ Have a Wonderful Day ✨
+    </div>
+</div>
+
+</body>
+</html>
